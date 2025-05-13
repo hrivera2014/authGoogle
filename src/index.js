@@ -34,7 +34,7 @@ return res.render("user-login", {userfmail:req.email, error:null});
 app.get(google.passport.authenticate("google", { scope: ["profile", "email"] }));
 // Google authentication callback route
 app.get("/auth/google/callback", 
-  passport.authenticate("google", { failureRedirect: "/login" }),
+passport.authenticate("google", { failureRedirect: "/login" }),
   (req, res) => {
   //Nt ati e straictinse Ot realoltart B snderctanrss hettit
  "auth/google/callback",

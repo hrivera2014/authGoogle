@@ -1,0 +1,29 @@
+{
+  "name": "authgoogle",
+  "version": "1.0.0",
+  "description": "google Oauth with Password library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hrivera2014/authgoogle.git"
+  },
+  "keywords": [
+    "oauth",
+    "google",
+    "passport"
+  ],
+  "author": "H.Rivera.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hrivera2014/authgoogle/issues"
+  },
+  "homepage": "https://github.com/hrivera2014/authgoogle#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.14.3",
+    "passport": "^0.7.0"
+  }
+}
