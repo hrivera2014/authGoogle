@@ -13,7 +13,7 @@ import otpRouter from "./src/features/otp/otp.routes.js"
 const app = express();
 
 app.set("view engine","ejs");
-app.set("views",path.join(path.resolve(),"src", "views"));
+app.set("views",path.join(path.resolve("src/public", "views"));
 
 // for below to work have a layout.ejs in views
 //app.use(ejsLayouts);
