@@ -2,18 +2,19 @@ import {
   updateUserPasswordRepo,
   userLoginRepo,
   userRegisterationRepo
-  } from *./user.repository.js”;
+  } from "./user.repository.js";
   import jwt from "jsonwebtoken";
-  import berypt from "berypt”;
-  import { revokeGoogleToken } from “../../config/passport-google.js";
-  import path from "path";
-  export const userRegisteration = async (req, res, next) = {
-  let { password } = req.body;
-  console.log(req.body);
+  import bcrypt from "bcrypt”;
+  import { revokeGoogleToken } from "../../config/passport-google.js";
+  import path from "node:path";
+  
+	export const userRegisteration = async (req, res, next) => {
+  let { password } = req.body
+  console.log(req.body)
   password = await bcrypt.hash(password, 12);
-  const resp = await userRegisterationRepo({email:req.body.email,password:password});
+  const resp = await userRegisterationRepo({ email:req.body.email, password: req.body.password})
   if (resp.success) {
-  res.render(“user-login", {userEmail:req.email,error:null});
+  	res.render(“user-login", {userEmail:req.email,error:null});
   } else {
   res.render("user-register”,{error:resp.error.msg,userEnail:req.email});
   // next(new customErrorHandler(resp.error.statusCode, resp.error.msg));
