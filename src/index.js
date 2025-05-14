@@ -1,8 +1,8 @@
-//import dotenv from "dotenv";
-//dotenv.config();
+//import dotenv from "dotenv"
+//dotenv.config()
 import cookieParser from "cookie-parser"
 import express from "express"
-i//import ejsLayouts from "express-ejs-layouts";
+//import ejsLayouts from "express-ejs-layouts"
 import path from "node:path"
 import passport from "passport"
 import session from "express-session"
@@ -12,8 +12,8 @@ import userRouter from "./src/features/user/user.routes.js"
 import otpRouter from "./src/features/otp/otp.routes.js"
 const app = express();
 
-app.set("view engine","ejs");
-app.set("views",path.join(path.resolve("src/public", "views"));
+app.set("view engine","ejs")
+app.set("views",path.join(path.resolve("src/public", "views"))
 
 // for below to work have a layout.ejs in views
 //app.use(ejsLayouts);
